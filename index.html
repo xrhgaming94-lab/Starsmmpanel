@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STAR SMM PANEL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#ec4899', // Pink-500
+                dark: '#be185d',    // Pink-700
+              },
+              secondary: '#22c55e',
+              danger: '#ef4444',
+              warning: '#eab308',
+              'base-100': '#1e293b',
+              'base-200': '#0f172a',
+              'base-300': '#334155',
+              'text-primary': '#f8fafc',
+              'text-secondary': '#94a3b8',
+            },
+            backgroundImage: {
+              'gradient-rainbow': 'linear-gradient(to right, #ec4899, #a855f7, #3b82f6)',
+              'gradient-neon': 'linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @keyframes blob {
+        0% { transform: translate(0px, 0px) scale(1); }
+        33% { transform: translate(30px, -50px) scale(1.1); }
+        66% { transform: translate(-20px, 20px) scale(0.9); }
+        100% { transform: translate(0px, 0px) scale(1); }
+      }
+      .animate-blob { animation: blob 7s infinite ease-in-out; }
+      .animation-delay-2000 { animation-delay: 2s; }
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translate3d(0, 20px, 0); }
+        to { opacity: 1; transform: translate3d(0, 0, 0); }
+      }
+      .fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
+      
+      .brand-glow {
+        color: #ec4899; /* Pink brand glow */
+        font-weight: 950;
+        text-shadow: 0 0 10px rgba(236, 72, 153, 0.5), 0 0 25px rgba(236, 72, 153, 0.3);
+        letter-spacing: -0.01em;
+        text-transform: uppercase;
+        font-style: normal !important;
+      }
+
+      .desc-glow {
+        text-shadow: 0 0 8px rgba(165, 180, 252, 0.6), 0 0 15px rgba(99, 102, 241, 0.3);
+      }
+
+      .word-green { color: #22c55e; }
+      .word-blue { color: #3b82f6; }
+      .word-red { color: #ef4444; }
+      .word-yellow { color: #eab308; }
+      .word-pink { color: #ec4899; }
+
+      .glass-card {
+        backdrop-filter: blur(20px);
+        background: rgba(30, 41, 59, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      ::-webkit-scrollbar { width: 5px; }
+      ::-webkit-scrollbar-track { background: #0f172a; }
+      ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "firebase/": "https://esm.sh/firebase@^12.8.0/",
+    "@emailjs/browser": "https://esm.sh/@emailjs/browser@^4.4.1",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@firebase/auth": "https://esm.sh/@firebase/auth@^1.12.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gray-50 text-slate-900 dark:bg-base-200 dark:text-text-primary transition-colors duration-300 overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
